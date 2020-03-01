@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Goal Tracker</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_goal_fragment">Make it your goal</string>
+    <string name="label_home_fragment">Home</string>
+
+    <string name="hint_habit_name">Add a goal</string>
+    <string name="label_descriptions_habit_name">Give this habit/goal a name:</string>
+    <string name="lets_do_it">Let\'s do it!</string>
+    <string name="about">About</string>
+    <string name="about_descriptions">Thanks for using Day 21! I work vary hard to make it the best habit/goal tracking app on Play Store. if you like the app. please upgrade!</string>
+    <string name="social_address">Contact with me\n@omiddeadlive@gmail.com</string>
+    <string name="title_about">About Goal Tracker</string>
+    <string name="clear">Clear</string>
+
+</resources>

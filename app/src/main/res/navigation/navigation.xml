@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.applike.goaltracker.ui.HomeFragment"
+        android:label="@string/label_home_fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_goalMakerFragment"
+            app:destination="@id/goalMakerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/goalMakerFragment"
+        android:name="com.applike.goaltracker.ui.GoalMakerFragment"
+        android:label="@string/label_goal_fragment"
+        tools:layout="@layout/fragment_goal_maker">
+        <action
+            android:id="@+id/action_goalMakerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="Goal"
+            android:defaultValue="@null"
+            app:argType="com.applike.goaltracker.database.Goal"
+            app:nullable="true" />
+    </fragment>
+</navigation>
