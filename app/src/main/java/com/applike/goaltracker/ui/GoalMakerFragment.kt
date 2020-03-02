@@ -1,24 +1,22 @@
 package com.applike.goaltracker.ui
 
-import android.app.Activity
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.*
-import androidx.fragment.app.Fragment
+import android.widget.DatePicker
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-
 import com.applike.goaltracker.R
 import com.applike.goaltracker.database.Goal
 import com.applike.goaltracker.databinding.FragmentGoalMakerBinding
 import com.applike.goaltracker.model.GoalViewModel
 import com.google.android.material.snackbar.Snackbar
-
 import kotlinx.android.synthetic.main.fragment_goal_maker.*
-import kotlinx.coroutines.launch
+import java.util.*
 
 
 class GoalMakerFragment : Fragment() {
@@ -54,7 +52,6 @@ class GoalMakerFragment : Fragment() {
                     editText_addGoal.error = "Insert a Goal title"
                     return@setOnClickListener
                 } else {
-//                    val mGoal = Goal(goalTitle)
                     goalViewModel.addGoal(mGoal)
                 }
             } else {
@@ -72,6 +69,8 @@ class GoalMakerFragment : Fragment() {
         setHasOptionsMenu(true)
         return binding.root
     }
+
+
 
     private fun deleteRow() {
         AlertDialog.Builder(context).apply {
